@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+}
+
+html , body{
+
+    color:black;
+    font-family: 'Lato', sans-serif;
+
+}
+.container{
+
+    background-color: burlywood;
+    display:flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.boxjeu{
+
+    width: 1040px;
+    height: 580px;
+    background-color: aquamarine;
+    padding: 40px;
+}
+header{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    background-color: palevioletred;
+    width:50px;
+    cursor: pointer;
+}
+.boxPlayer{
+
+    display:flex;
+    flex-direction: row;
+    height: 100%;
+}
+.player{
+
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+
+}
+
+.player1{
+    background-color: gray;
+    width: 50%;
+    height: 100%;
+}
+.player2{
+    background-color: antiquewhite;
+    width: 50%;
+    height: 100%;
+}
+
