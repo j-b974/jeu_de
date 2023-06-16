@@ -4,11 +4,17 @@
     margin:0;
     padding: 0;
 }
+i{
+    color: red;
+    font-size: 1.2rem;
+    padding-right: 0.5rem;
+}
 
 html , body{
 
     color:black;
     font-family: 'Lato', sans-serif;
+    font-size: 1.3em;
 
 }
 .container{
@@ -24,28 +30,38 @@ html , body{
 
 .boxjeu{
 
+    position: relative;
     width: 1040px;
     height: 580px;
-    background-color: aquamarine;
-    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #f7f7f7;
+    background-image: linear-gradient(90deg, #f7f7f7 50%, #ffffff 51%);
 }
 header{
     text-align: center;
     display: flex;
     justify-content: center;
+    font-weight: 300;
 }
 
 .button {
-    background-color: palevioletred;
-    width:50px;
+
     cursor: pointer;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 .boxPlayer{
 
     display:flex;
     flex-direction: row;
-    height: 100%;
+    
 }
+
 .player{
 
     display: flex;
@@ -53,18 +69,110 @@ header{
     justify-content:space-around;
     align-items: center;
     width: 50%;
-    height: 100%;
 
 }
+.player h3{
+    font-weight: 100;
+}
+.player h3.active {
+    font-weight: 700;
+}
 
-.player1{
-    background-color: gray;
+.player1 , .player2{
     width: 50%;
-    height: 100%;
+
 }
-.player2{
-    background-color: antiquewhite;
-    width: 50%;
-    height: 100%;
+.active::after{
+    content:"";
+    display:inline-block;
+    width: 11px;
+    height: 11px;
+    margin-right:5px;
+    border-radius: 50%;
+    background-color: red;
+    transform: translate(8px, calc(-50%));
+
+}
+.score{
+    color:red;
+    font-size: 4rem;
+    font-weight: 200;
+}
+.footerbox {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.scoreCurrent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 4rem;
 }
 
+.scoreCurrent p{
+    font-size: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+.scoreCurrent span{
+    font-size: 1.8rem;
+    color:white;
+}
+.option{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.option p{
+    font-weight: 300;
+    font-size: 1rem;
+}
+.deImage{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50% , -50%);
+    
+}
+.deImage img{
+    width: 100px;
+    
+}
+.boxInfo{
+    display: flex;
+    justify-content: center;
+}
+.info{
+    display:none;
+    background-color: rgb(177, 221, 110);
+    width: 55%;
+    padding:0.8rem;
+    margin-left:0;
+    margin-right:0;
+    text-align: center;
+    border-radius: 8px;
+    z-index:1;
+}
+/* ========= responsive ============= */
+
+
+@media screen and (max-width:1050px){
+    .boxjeu{
+        width: 520px;
+    }
+
+    .deImage{
+        top:30%;
+    }
+
+}
+@media screen and (max-width:520px){
+
+    .deImage img{
+        width: 100%;
+    }
+
+}
